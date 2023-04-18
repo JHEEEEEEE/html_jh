@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 킬 때마다 영어번역 뜨는 거 없애기 -->
+<html lang = 'ko'>
+
+<head>
+    <title>Page Title</title>
+    <!-- Favicon 탭창 왼쪽에 작은 이미지 넣어줌 -->
+    <link rel="shortcut icon" href="http://ggoreb.com/logo.jpg">
+    <!-- Open graph 카톡에 보낼때 이미지-->
+    <meta property="og:image" content="http://ggoreb.com/images/luffy.jpg">
+    <!-- 한글 깨짐 방지 -->
+    <meta charset="utf-8">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+     rel="stylesheet"> <!-- 파이썬에서 임포트 같은역할 -->
+</head>
+
+<body>
+    <iframe src="https://www.youtube.com/embed/rV3vH3NOg4A">
+    </iframe>
+    <ul class=" list-group-horizontal list-group">
+        <li class="list-group-item">A</li>
+        <li class="list-group-item">B</li>
+        <li class="list-group-item">C</li>
+    </ul>
+    <hr>
+    <table border="1">
+        <tr>
+            <th rowspan="2">번호</th>
+            
+            <td colspan="2">이름</td>
+           
+        </tr>  
+        <tr>
+            <td>1</td>
+            <td onclick="alert('hello')">김</td>   
+            <td>10</td>
+        </tr>
+    </table> 
+    <hr>                             <!--   구분선 -->
+    <img src="sun.jpg" alt="태양사진" 
+    onerror="this.src='error.png'">
+    <hr>
+    <a href = "http://cafe.naver.com">이동</a>
+    <a href = "연습1.html">이동</a>
+    <br>    
+    <!-- 이미지 첨부 -->
+    <img src= "luffy.jfif" width = "200px">
+    <!-- 제목 h1 글자크게 h6까지 있는데 점점 작아짐 -->
+    <h1 style="font-size: 20px;">My First Heading</h1>
+    <!-- 문장 쓰기 -->
+    <p>My first paragraph.</p>
+    <!-- 구분선 -->
+    <hr>
+    <p> 한줄 </p>
+    <p> 두줄 </p>
+    <span>단어1</span>
+    <span>단어2</span>
+    <p> 첫번째 <br><br>
+        두&nbsp;번&nbsp;째 </p>
+</body>
+
+</html>
