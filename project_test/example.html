@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Grid Example</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* 3개의 열 */
+      grid-template-rows: repeat(2, 1fr);
+      /* 2개의 행 */
+      grid-gap: 10px;
+      /* 격자 사이의 간격 */
+      height: 100vh;
+      /* 전체 화면 높이 */
+      width: 100vw;
+      /* 전체 화면 너비 */
+      align-items: center;
+      /* 세로 중앙 정렬 */
+      justify-items: center;
+      /* 가로 중앙 정렬 */
+    }
+
+    .grid-item {
+      background-color: #eee;
+      /* 격자 색상 */
+      padding: 20px;
+      /* 격자 안쪽 여백 */
+      font-size: 24px;
+      /* 글자 크기 */
+      text-align: center;
+      /* 텍스트 중앙 정렬 */
+      border: 1px solid black;
+      /* 내부 경계선 */
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+</body>
+
+</html> 

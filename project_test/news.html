@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>뉴스 모음</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+  <style>
+    /* 전체 페이지 스타일 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 헤더 스타일 */
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    /* 섹션 스타일 */
+    section {
+      margin: 2rem 0;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    article {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    article h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    article p {
+      margin-bottom: 0;
+    }
+
+    article a {
+      color: #333;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 네비게이션 바  -->
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">News</h4>
+            <p class="text-muted">사회가 어떻게 움직이는지 알려주는 곳입니다.</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">News</h4>
+            <ul class="list-unstyled">
+              <li><a href="https://www.chosun.com/" class="text-white">조선일보</a></li>
+              <li><a href="https://www.joongang.co.kr/" class="text-white">중앙일보</a></li>
+              <li><a href="https://www.donga.com/" class="text-white">동아일보</a></li>
+              <li><a href="https://news.sbs.co.kr/news/newsMain.do" class="text-white">SBS뉴스</a></li>
+              <li><a href="https://news.kbs.co.kr/common/main.html" class="text-white">KBS뉴스</a></li>
+              <li><a href="https://imnews.imbc.com/pc_main.html" class="text-white">MBC뉴스</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">자기계발 최고</a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#" style="color: white;">운동</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: white;">뉴스</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: white;">유튜브</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: white;">책</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: white;">동기부여</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: white;">자격증</a>
+                </li>
+    
+    
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: white;"
+                    aria-expanded="false">
+                    마이페이지
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" >일기</a></li>
+                    <li><a class="dropdown-item" href="#" >TodoList</a></li>
+                    <li><a class="dropdown-item" href="#" >달력</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+      </div>
+    </div>
+    </header>
+<!-- 네비게이션 바 끝 -->
+  
+  <main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">뉴스</h1>
+          <p class="lead text-muted">현재 언론사별 이슈 TOP10을 모아놓은 곳입니다. 뉴스를 보지 않으면 사회를 알 수 없습니다. 당장 뉴스를 읽으세요. 응원합니다.</p>
+          <p>
+            <a href="https://www.kyobobook.co.kr/" class="btn btn-primary my-2" style="background-color: green;">교보문고</a>
+            <a href="https://www.aladin.co.kr/home/welcome.aspx" class="btn btn-secondary my-2" style="background-color: purple;">알라딘</a>
+            <a href="http://www.yes24.com/main/default.aspx" class="btn btn-third my-2" style="background-color: blue; color: white;" >예스24</a>
+            <a href="https://www.millie.co.kr/v3/brand/update?utm_source=google&utm_medium=cpc&utm_campaign=pc&utm_content=brand&utm_term=%EB%B0%80%EB%A6%AC%EC%9D%98%EC%84%9C%EC%9E%AC&gad=1&gclid=Cj0KCQjw3a2iBhCFARIsAD4jQB0CHircpS2W8Z2fRNPWluZilqO94IFfAjuKjeMW1UdwRG3NjUJQfK0aAsnLEALw_wcB#intro" class="btn btn-third my-2" style="background-color: yellow; color: black;">밀리의 서재</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="mb-2">
+          <i class="fa fa-calendar-check"></i> 편의점행사
+          <a href="/posts/" class="text-dark">
+              <small class="mt-1 float-right font-weight-bold"><i class="fa fa-plus-circle"></i> 더보기
+              </small>
+          </a>
+      </div>
+      <div class="card border mb-3">
+          <div class="card-body small px-2 py-2">
+              <ul class="list-group list-group-flush">
+                  
+                      
+                          <li class="list-group-item px-0 py-1">
+                              <a href="/posts/1176/" class="deco-none">
+                                  <div>
+                                      <div>
+                                          <div class="font-weight-bold text-overflow-hidden">
+                                              <span class="text-dark">GS25 4월의 카드/페이 결제수단 행사모음 2023.04.01 ~ 2023.04.30</span>
+                                          </div>
+                                      </div>
+                                      <div class="text-muted">
+                                          by <span class="text-danger">caffeine</span>
+                                          <i class="far fa-eye"></i> 6,296
+                                          <small><i class="far fa-clock"></i> 4주 전</small>
+                                      </div>
+                                  </div>
+                              </a>
+                          </li>
+                      
+                          <li class="list-group-item px-0 py-1">
+                              <a href="/posts/1175/" class="deco-none">
+                                  <div>
+                                      <div>
+                                          <div class="font-weight-bold text-overflow-hidden">
+                                              <span class="text-dark">GS25 혼자여도 잘 먹짜! 블랙데이와 함께해 봄 2023.04.01 ~ 2023.04.30</span>
+                                          </div>
+                                      </div>
+                                      <div class="text-muted">
+                                          by <span class="text-danger">caffeine</span>
+                                          <i class="far fa-eye"></i> 3,643
+                                          <small><i class="far fa-clock"></i> 4주 전</small>
+                                      </div>
+                                  </div>
+                              </a>
+                          </li>
+                      
+                          <li class="list-group-item px-0 py-1">
+                              <a href="/posts/1174/" class="deco-none">
+                                  <div>
+                                      <div>
+                                          <div class="font-weight-bold text-overflow-hidden">
+                                              <span class="text-dark">GS25 나들이와 함께해봄 초특가 &amp; N+1 이벤트! 2023.04.01 ~ 2023.04.30</span>
+                                          </div>
+                                      </div>
+                                      <div class="text-muted">
+                                          by <span class="text-danger">caffeine</span>
+                                          <i class="far fa-eye"></i> 2,782
+                                          <small><i class="far fa-clock"></i> 4주 전</small>
+                                      </div>
+                                  </div>
+                              </a>
+                          </li>
+                      
+                          <li class="list-group-item px-0 py-1">
+                              <a href="/posts/1173/" class="deco-none">
+                                  <div>
+                                      <div>
+                                          <div class="font-weight-bold text-overflow-hidden">
+                                              <span class="text-dark">GS25 만우절 맞이 거짓말 같은 뻥이요 1+2 이벤트 2023.04.01 ~ 2023.04.02</span>
+                                          </div>
+                                      </div>
+                                      <div class="text-muted">
+                                          by <span class="text-danger">caffeine</span>
+                                          <i class="far fa-eye"></i> 2,496
+                                          <small><i class="far fa-clock"></i> 4주 전</small>
+                                      </div>
+                                  </div>
+                              </a>
+                          </li>
+                      
+                          <li class="list-group-item px-0 py-1">
+                              <a href="/posts/1172/" class="deco-none">
+                                  <div>
+                                      <div>
+                                          <div class="font-weight-bold text-overflow-hidden">
+                                              <span class="text-dark">GS25 중간고사와 함께해봄 증정 &amp; N+1 이벤트! 2023.04.01 ~ 2023.04.30</span>
+                                          </div>
+                                      </div>
+                                      <div class="text-muted">
+                                          by <span class="text-danger">caffeine</span>
+                                          <i class="far fa-eye"></i> 2,107
+                                          <small><i class="far fa-clock"></i> 4주 전</small>
+                                      </div>
+                                  </div>
+                              </a>
+                          </li>
+                      
+                  
+              </ul>
+          </div>
+      </div>
+  </div>
+
+    <section id="chosun">
+      <h2>조선일보</h2>
+      <article>
+        <h3>한미, 北 ‘장거리 탄도미사일’ 성능평가 완료</h3>
+        <p>한미 양국이 북한이 최근 쏜 ‘장거리 탄도미사일’의 성능을 평가한 결과, 군사 당국자들은 이번 탄도미사일이 실제 전투 상황에서 유용하게 쓰일 가능성이 있다는 것을 인지하고 있다고 25일 밝혔다.
+        </p>
+        <a href="https://news.chosun.com/international/2022/04/25/U7PRMEB26ZHBLJ37GUFCEHDBIM/">기사 링크</a>
+      </article>
+      <article>
+        <h3>美 중앙정보국, 北 탈북자 인권침해보고서 발표</h3>
+        <p>미국 중앙정보국(CIA)은 이날 최초로 북한이 탈북자를 인권 침해하는 수법을 소개하는 보고서를 발표했다. 이 보고서는 미국이 북한을 향해 제출한 정기 보고서 중 처음으로 인권 분야에 관한 것이다.
+        </p>
+        <a href="https://news.chosun.com/international/2022/04/25/ROZ44PRDLNCDNNEQ2FJTVNDCSA/">기사 링크</a>
+      </article>
+    </section>
+    <section id="donga">
+      <h2>동아일보</h2>
+      <article>
+        <h3>美 이후 EU, 또 中산업스파이 적발</h3>
+        <p>미국과 유럽을 거쳐 중국까지 이어지는 기업 스파이의 의혹이 또다시 나왔다. 독일 경찰은 최근 중국 정보국 기술이 직접나서든 혹은 간접적으로 참여한 독일 내 3명의 중국인과 한 명의 독일인을
+          체포했다.</p>
+        <a href="https://www.donga.com/news/article/all/20220426/114190072/1">기사 링크</a>
+      </article>
+      <article>
+        <h3>한·EU, 디지털·환경협력 신규 협상</h3>
+        <p>한국과 유럽연합(EU)이 디지털 및 환경 분야 등에서 협력을 강화하기 위한 협상을 시작했다. 이번 협상은 미국과 중국의 경쟁이 치열해진 상황에서 미래 지향적 성장 동력 확보를 위한 중요한 계기로
+          평가된다.</p>
+        <a href="https://www.donga.com/news/article/all/20220425/114156081/1">기사 링크</a>
+      </article>
+    </section>
+    <section id="hani">
+      <h2>한겨례</h2>
+      <article>
+        <h3>WHO "폐렴 치료제 사용 지침, 더 이상 신뢰할 수 없어"</h3>
+        <p>세계보건기구(WHO)는 25일 코로나19 환자의 폐렴 치료제 사용 지침을 수정하면서 “이전 지침에 대한 신뢰를 더 이상 가질 수 없다”며 우려를 표명했다.</p>
+        <a href="https://www.hani.co.kr/arti/international/international_general/1038013.html">기사 링크</a>
+      </article>
+      <article>
+        <h3>美 국방부 "北미사일 사격 성능 ‘극히 실망스러움’"</h3>
+        <p>미국 국방부는 25일 북한이 최근 쏜 ‘장거리 탄도미사일’에 대해 “우리는 이번 발사 결과에 대해 극히 실망스러움을 표명하며 북한에 대한 긴장을 유지하고 있다”고 밝혔다.</p>
+        <a href="https://www.hani.co.kr/arti/international/international_general/1038008.html">기사 링크</a>
+      </article>
+    </section>
+  </main>
+
+
+
+  <!-- 끝 -->
+  <footer class="text-muted py-5">
+    <div class="container">
+      <p class="address">
+        <span>주소 : 세종특별자치시 조치원읍 세종로 2639 (신안리 300) 홍익대학교 세종캠퍼스 (우) 30016</span>
+        <span>전화 : 010-2705-9928</span>
+        <span>등록일자 : 2023.05.03</span>
+        <span>발행인 : 유정현</span>
+        <span>편집인 : 유정현</span>
+        <a href="https://www.joongang.co.kr/sitemap/index" class="sm_hidden md_hidden"
+            data-evnt-ctg="area:중앙|섹션" data-evnt-act="move:A40 푸터 태그" data-evnt-lbl="전체 서비스">전체
+            서비스</a>
+    </p>
+  
+    <!-- 밑에   사업자명 : 등록번호: 등등 정보들 표시하는 곳 -->
+    <p class="address">
+        <span>사업자명 : <a href="https://www.joongang.co.kr">모아일보㈜</a></span>
+        <span>사업자등록번호 : 010-2705-9928</span>
+        <span>대표자명 : 유정현</span>
+        <em>통신판매업신고번호 : 010-2705-9928</em>
+    </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
